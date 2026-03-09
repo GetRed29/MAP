@@ -1,11 +1,5 @@
 sequenceDiagram
 
-actor Client
-participant Controller
-participant OrderService
-participant Repository
-participant PaymentService
-
 Client->>Controller: cancelOrder(id)
 
 Controller->>OrderService: cancelOrder(id)
@@ -25,5 +19,6 @@ OrderService->>Repository: updateStatus(CANCELLED)
 
 OrderService-->>Controller: orderCancelled
 Controller-->>Client: success
+
 
 end
