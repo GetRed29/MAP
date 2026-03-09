@@ -1,13 +1,5 @@
 sequenceDiagram
 
-actor Client
-participant Controller
-participant OrderService
-participant PaymentService
-participant Repository
-participant EmailService
-participant PaymentGateway
-
 Client->>Controller: placeOrder()
 
 Controller->>OrderService: createOrder()
@@ -43,5 +35,6 @@ PaymentService-->>OrderService: failed
 OrderService-->>Controller: error
 
 Controller-->>Client: payment failed
+
 
 end
